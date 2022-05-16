@@ -4,25 +4,18 @@ require_once "../DB_Connection.php";
 unset($_SESSION['error']);
 $_SESSION['errorLength'] = 0;
 
-$_SESSION['creAccFirst'] = $_GET['firstname'];
-$_SESSION['creAccLast'] = $_GET['lastname'];
+$_SESSION['creAccFirst'] = $_GET['name'];
 $_SESSION['creAccEmail'] = $_GET['email'];
+$_SESSION['creAccNum'] = $_GET['phonenum'];
 $_SESSION['creAccPass'] = $_GET['pass'];
 $_SESSION['creAccRepass'] = $_GET['repass'];
 
-if ($_GET['firstname'] == ""){
+if ($_GET['name'] == ""){
     $_SESSION['error'] .= "Geen Voornaam ingevoerd.<br>";
     unset($_SESSION['creAccFirst']);
-} else if (!preg_match('/^[a-zA-Z]+$/', $_GET['firstname'])){
+} else if (!preg_match('/^[a-zA-Z]+$/', $_GET['name'])){
     $_SESSION['error'] .= "Voornaam is niet geldig.<br>";
     unset($_SESSION['creAccFirst']);
-}
-if ($_GET['lastname'] == ""){
-    $_SESSION['error'] .= "Geen Achternaam ingevoerd.<br>";
-    unset($_SESSION['creAccLast']);
-} else if (!preg_match('/^[a-zA-Z]+$/', $_GET['lastname'])){
-    $_SESSION['error'] .= "Achternaam is niet geldig.<br>";
-    unset($_SESSION['creAccLast']);
 }
 if ($_GET['email'] == ""){
     $_SESSION['error'] .= "Geen email ingevoerd.<br>";
@@ -31,7 +24,7 @@ if ($_GET['email'] == ""){
         $_SESSION['error'] .= "Email is niet geldig.<br>";
         unset($_SESSION['creAccEmail']);
     } else {
-        $sth = $pdo -> prepare("SELECT * FROM `accounts` WHERE email=?");
+        $sth = $pdo -> prepare("SELECT * FROM `klanten` WHERE email=?");
         $sth -> execute([$_GET['email']]);
         $row = $sth -> fetch();
         if ($row != "") {
@@ -39,6 +32,13 @@ if ($_GET['email'] == ""){
             unset($_SESSION['creAccEmail']);
         }
     }
+if ($_GET['phonenum'] == ""){
+    $_SESSION['error'] .= "Geen telefoonnummer ingevoerd.<br>";
+    unset($_SESSION['creAccNum']);
+} else if (!preg_match('/^\d{10,11}$/', $_GET['phonenum'])){
+    $_SESSION['error'] .= "Telefoonnummer is niet geldig.<br>";
+    unset($_SESSION['creAccNum']);
+}
 if ($_GET['pass'] == ""){
     $_SESSION['error'] .= "Geen wachtwoord ingevoerd.<br>";
 } else {
@@ -63,40 +63,32 @@ if ($_GET['pass'] == ""){
     unset($_SESSION['creAccPass']);
     unset($_SESSION['creAccRepass']);
 }
-if (!isset($_GET['teacher'])){
-    $_SESSION['error'] .= "Je hebt niet aangegeven of je een leraar of een leerling bent.<br>";
-}
 
 $_SESSION['errorLength'] = substr_count($_SESSION['error'],"<br>");
 
 if ($_SESSION['error']!=""){
     $_SESSION['extendHeight'] = 710 + ($_SESSION['errorLength'] * 23);
-    header("Location: createAccount.php");
+    header("Location: index.php");
     exit();
 } else {
     $pass = password_hash($_GET['pass'],PASSWORD_DEFAULT);
 
-        $sth = $pdo -> prepare("INSERT INTO `accounts` (`firstName`, `lastName`, `email`, `password`, `teacher`, `perms`, `groupID`) VALUES (?,?,?,?,?,0,1);");
-        $sth -> execute([$_GET['firstname'], $_GET['lastname'], $_GET['email'], $pass, $_GET['teacher']]);
+    $sth = $pdo -> prepare("INSERT INTO `klanten` (`Naam`,`Email`,`Telefoon`,`Wachtwoord`) VALUES (?,?,?,?);");
+    $sth -> execute([$_GET['name'], $_GET['email'], $_GET['phonenum'], $pass]);
 
-        $sth = $pdo -> prepare("SELECT * FROM `accounts` WHERE email=?");
-        $sth -> execute([$_GET['email']]);
-        $row = $sth -> fetch();
+    $sth = $pdo -> prepare("SELECT `ID` FROM `klanten` WHERE email=?");
+    $sth -> execute([$_GET['email']]);
+    $row = $sth -> fetch();
 
-        if (!isset($row['perms'])) {
-            $_SESSION['error'] .= "Er ging aan onze kant iets mis bij het maken van je account, sorry! Probeer het later opnieuw.<br>";
-            $_SESSION['extendHeight'] = 750;
-            header("Location: createAccount.php");
-            exit();
-        }
+    if (!isset($row['ID'])) {
+        $_SESSION['error'] .= "Er ging aan onze kant iets mis bij het maken van je account, sorry! Probeer het later opnieuw.<br>";
+        $_SESSION['extendHeight'] = 750;
+        header("Location: createAccount.php");
+        exit();
+    }
 
     $_SESSION['loggedID'] = $row['id'];
 
-    if ($_GET['teacher'] == 0) {
-        header("Location: ../Student/studentSite.php?selected=1");
-        exit();
-    } else {
-        header("Location: ../teacher/teacherSite.php?selected=1");
-        exit();
-    }
+    header("Location: ../../index.php");
+    exit();
 }

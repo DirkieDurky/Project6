@@ -1,13 +1,14 @@
 @font-face {
     font-family: Torus Regular;
-    src: url("../../Sources/Torus Regular.otf");
+    src: url('');
 }
 
-body#signIn {
-    background-image: url('../../Sources/RekensiteBackground.png');
+body#logIn {
+    background-image: url('');
 }
 
 .field {
+    display: block;
     font-family: "Torus Regular", serif;
     margin-top: 5px;
     color: white;
@@ -22,12 +23,12 @@ body#signIn {
 }
 
 .extend {
-    animation:extend;
+    animation: extend;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
-.field#signIn {
+.field#logIn {
     height: 435px;
 }
 
@@ -68,7 +69,8 @@ h1 {
     font-size: 35px;
 }
 
-.field [type="text"],[type="password"] {
+.field [type="text"],
+[type="password"] {
     font-family: "Torus Regular", serif;
     font-size: 20px;
     position: relative;
@@ -114,7 +116,9 @@ h1 {
 }
 
 @keyframes hover {
-    to {filter: brightness(80%);}
+    to {
+        filter: brightness(80%);
+    }
 }
 
 .error {
@@ -128,11 +132,13 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-@keyframes show{
-    to {opacity: 100}
+@keyframes show {
+    to {
+        opacity: 100
+    }
 }
 
-.error#signIn {
+.error#logIn {
     top: 0;
     margin-top: -20px;
 }
@@ -198,7 +204,7 @@ body#teacherSite {
     left: 50%;
 }
 
-.headerSelect a{
+.headerSelect a {
     text-decoration: none;
     text-align: center;
     color: white;
@@ -213,11 +219,11 @@ body#teacherSite {
     transition: all 200ms;
 }
 
-.headerSelect a:hover{
-   filter: brightness(80%);
+.headerSelect a:hover {
+    filter: brightness(80%);
 }
 
-.headerSelect #selected{
+.headerSelect #selected {
     background-color: #3D3D3D;
 }
 
@@ -247,7 +253,7 @@ body#teacherSite {
     right: 0;
     background-color: #181818;
     width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -262,7 +268,9 @@ body#teacherSite {
     background-color: #212121;
 }
 
-.dropdown:hover .dropdown-cont {display: block;}
+.dropdown:hover .dropdown-cont {
+    display: block;
+}
 
 .table {
     position: relative;
@@ -281,11 +289,12 @@ body#teacherSite {
     border: solid 1px;
 }
 
-.table td:not(.permsRadio)  {
+.table td:not(.permsRadio) {
     padding: 0 20px;
 }
 
-.table#students td:first-child, .table#usersInGroup td:first-child{
+.table#students td:first-child,
+.table#usersInGroup td:first-child {
     border: none;
     padding: 0 3px;
 }
@@ -294,7 +303,7 @@ body#teacherSite {
     margin-top: 50px;
 }
 
-#students{
+#students {
     margin-top: 20px;
 }
 
@@ -302,7 +311,7 @@ body#teacherSite {
     position: relative;
     transform: translate(-50%, -50%);
     left: 50%;
-    margin-top:20px;
+    margin-top: 20px;
     display: inline-block;
 }
 
@@ -310,7 +319,7 @@ body#teacherSite {
     position: relative;
     transform: translate(-50%, -50%);
     left: 50%;
-    margin-top:20px;
+    margin-top: 20px;
     display: inline-block;
 }
 
@@ -320,9 +329,9 @@ body#teacherSite {
     transform: translate(-50%, 0);
     left: 50%;
     top: 0;
-    margin-top:56px;
+    margin-top: 56px;
     background-color: #AAAAAA;
-    display:block;
+    display: block;
     padding: 20px 50px 0 50px;
     min-width: 500px;
     min-height: 200px;
@@ -334,9 +343,9 @@ body#teacherSite {
     transform: translate(-50%, 0);
     left: 50%;
     top: 0;
-    margin-top:56px;
+    margin-top: 56px;
     background-color: #AAAAAA;
-    display:block;
+    display: block;
     padding: 20px 50px 0 50px;
     min-width: 500px;
     min-height: 200px;
@@ -344,7 +353,7 @@ body#teacherSite {
 
 .warning {
     font-family: "Torus regular", serif;
-    font-size:20px;
+    font-size: 20px;
     text-align: center;
     color: red;
     position: absolute;
@@ -355,11 +364,11 @@ body#teacherSite {
     height: 200px;
     background-color: #212121;
     border-radius: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .warning h3 {
-    position:absolute;
+    position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 40%;
@@ -395,8 +404,8 @@ body#teacherSite {
     z-index: 1;
     color: lime;
     text-align: center;
-    right:2%;
-    bottom:2%;
+    right: 2%;
+    bottom: 2%;
     background-color: #3d3d3d;
     width: 250px;
     min-height: 50px;
@@ -414,9 +423,17 @@ body#teacherSite {
 }
 
 @keyframes notification {
-    from {opacity: 100}
-    65% {opacity: 100}
-    to {opacity: 0}
+    from {
+        opacity: 100
+    }
+
+    65% {
+        opacity: 100
+    }
+
+    to {
+        opacity: 0
+    }
 }
 
 #addGroupButton {
@@ -460,7 +477,8 @@ body#teacherSite {
     left: 5px;
 }
 
-.collapsibleActive, .collapsible:hover {
+.collapsibleActive,
+.collapsible:hover {
     background-color: #ccc;
 }
 
@@ -472,7 +490,7 @@ body#teacherSite {
     transition: max-height 0.2s ease-out;
     position: relative;
     width: 90%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%);
 }
 
