@@ -33,7 +33,7 @@ if ($_GET['pass'] == "") {
 
 if ($_SESSION['error'] != "") {
     $_SESSION['errorLength'] = substr_count($_SESSION['error'], "<br>");
-    $_SESSION['extendHeight'] = 450 + ($_SESSION['errorLength'] * 24);
+    $_SESSION['extendHeight'] = $_SESSION['logInFieldDefaultLength'] + ($_SESSION['errorLength'] * $_SESSION['lineHeight']);
     echo $_SESSION['error'];
     header("Location: index.php");
     exit();

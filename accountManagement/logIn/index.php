@@ -23,29 +23,31 @@ if (isset($_COOKIE['loginEmail'])) {
     <link href=../style.css rel=stylesheet>
 </head>
 <body id="logIn">
-<div class="field <?= isset($_SESSION['error']) && $_SESSION['error']!="" ? "extend" : ""?>" id="logIn">
-    <h1>Inloggen bij Mijn Donkey Travel</h1><br>
-    <form action="logIn.php">
-        <div class=name>
+<div class="grid">
+    <div class="field <?= isset($_SESSION['error']) && $_SESSION['error']!="" ? "extend" : ""?>" id="logIn">
+        <h1>Inloggen bij Mijn Donkey Travel</h1><br>
+        <form action="logIn.php">
+            <div class=name>
+                <label>
+                    Email:<br>
+                    <input class="input" name="email" placeholder="Email" type="text" value="<?= (isset($_SESSION['logInEmail'])) ? $_SESSION['logInEmail'] : ""?>">
+                </label><br>
+            </div>
+            <div class=pass>
+                <label>
+                    Wachtwoord:<br>
+                    <input class="input" name="pass" placeholder="Wachtwoord" type="password">
+                </label><br>
+            </div>
             <label>
-                Email:<br>
-                <input class="input" name="email" placeholder="Email" type="text" value="<?= (isset($_SESSION['logInEmail'])) ? $_SESSION['logInEmail'] : ""?>">
+                Onthoud mijn gevens
+                <input type="checkbox" name="rememberMe">
             </label><br>
-        </div>
-        <div class=pass>
-            <label>
-                Wachtwoord:<br>
-                <input class="input" name="pass" placeholder="Wachtwoord" type="password">
-            </label><br>
-        </div>
-        <label>
-            Onthoud mijn gevens
-            <input type="checkbox" name="rememberMe">
-        </label><br>
-        <input class="submit" name="submit" type="submit" value="Inloggen"><br>
-    </form>
-    <a class="hyperlinks" href="../register">Ik heb nog geen account</a>
-    <h4 class="error" id="logIn"><?php if(isset($_SESSION['error'])){echo $_SESSION['error']; unset($_SESSION['error']);}?></h4>
+            <input class="submit" name="submit" type="submit" value="Inloggen"><br>
+        </form>
+        <a class="hyperlinks" href="../register">Ik heb nog geen account</a>
+        <h4 class="error" id="logIn"><?php if(isset($_SESSION['error'])){echo $_SESSION['error']; unset($_SESSION['error']);}?></h4>
+    </div>
 </div>
 </body>
 </html>

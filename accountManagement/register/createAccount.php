@@ -11,9 +11,9 @@ $_SESSION['creAccPass'] = $_GET['pass'];
 $_SESSION['creAccRepass'] = $_GET['repass'];
 
 if ($_GET['name'] == ""){
-    $_SESSION['error'] .= "Geen Voornaam ingevoerd.<br>";
+    $_SESSION['error'] .= "Geen voornaam ingevoerd.<br>";
     unset($_SESSION['creAccFirst']);
-} else if (!preg_match('/^[a-zA-Z]+$/', $_GET['name'])){
+} else if (!preg_match('/^[a-zA-Z \.]+$/', $_GET['name'])){
     $_SESSION['error'] .= "Voornaam is niet geldig.<br>";
     unset($_SESSION['creAccFirst']);
 }
@@ -67,7 +67,7 @@ if ($_GET['pass'] == ""){
 $_SESSION['errorLength'] = substr_count($_SESSION['error'],"<br>");
 
 if ($_SESSION['error']!=""){
-    $_SESSION['extendHeight'] = 710 + ($_SESSION['errorLength'] * 23);
+    $_SESSION['extendHeight'] = $_SESSION['createAccFieldDefaultLength'] + ($_SESSION['errorLength'] * $_SESSION['lineHeight']);
     header("Location: index.php");
     exit();
 } else {
@@ -82,7 +82,7 @@ if ($_SESSION['error']!=""){
 
     if (!isset($row['ID'])) {
         $_SESSION['error'] .= "Er ging aan onze kant iets mis bij het maken van je account, sorry! Probeer het later opnieuw.<br>";
-        $_SESSION['extendHeight'] = 750;
+        $_SESSION['extendHeight'] = $_SESSION['createAccFieldDefaultLength'] + 40;
         header("Location: createAccount.php");
         exit();
     }
