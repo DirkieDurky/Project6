@@ -1,0 +1,206 @@
+@font-face {
+    font-family: Torus Regular;
+    src: url('');
+}
+
+body#logIn {
+    background-image: url('');
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "backbutton field empty";
+}
+
+.field {
+    grid-area: field;
+    display: block;
+    font-family: "Torus Regular", serif;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    width: 600px;
+    border-radius: 16px;
+    font-size: 17px;
+    background-color: #333;
+}
+
+.extend {
+    animation: extend;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.field#logIn {
+    height: 450px;
+}
+
+.field#createAccount {
+    height: 670px;
+}
+
+.backButton {
+    grid-area: backbutton;
+    justify-self: end;
+    align-self: start;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-family: "Torus Regular", serif;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    background-color: #333;
+    border: none;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 16px;
+}
+
+.backButton:link .backButton:visited {
+    text-decoration: none;
+}
+
+.backButton:hover {
+    cursor: pointer;
+    animation: hover 200ms;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.field [type="text"],
+[type="password"] {
+    font-family: "Torus Regular", serif;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    background-color: #222;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+    width: 20em;
+    height: 2em;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.submit {
+    font-family: "Torus Regular", serif;
+    color: white;
+    font-size: 20px;
+    height: 55px;
+    width: 350px;
+    position: relative;
+    margin-top: 20px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    cursor: pointer;
+    animation: hover 100ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover {
+    to {
+        filter: brightness(80%);
+    }
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+    position: relative;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    opacity: 0;
+    animation: show 200ms step-start 400ms;
+    animation-fill-mode: forwards;
+}
+
+.error#logIn {
+    top: 0;
+    margin-top: -20px;
+}
+
+.error#createAccount {
+    top: 20px;
+    margin-top: 0;
+}
+
+.hyperlinks {
+    font-family: "Segoe UI", serif;
+    font-size: 16px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    display: block;
+    left: 50%;
+    width: 500px;
+    margin-top: 25px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.hyperlinks:link {
+    text-decoration: none;
+    color: rgb(255, 204, 34);
+}
+
+.hyperlinks:hover {
+    text-decoration: underline;
+}
+
+.hyperlinks:visited {
+    color: rgb(255, 204, 34);
+}
+
+@keyframes show {
+    to {
+        opacity: 100
+    }
+}
+
+.notification {
+    display: block;
+    opacity: 0;
+    font-family: "Torus regular", serif;
+    position: fixed;
+    z-index: 1;
+    color: lime;
+    text-align: center;
+    right: 2%;
+    bottom: 2%;
+    background-color: #3d3d3d;
+    width: 250px;
+    min-height: 50px;
+    animation: notification 3500ms;
+    vertical-align: middle;
+}
+
+.notification:hover {
+    animation: none;
+    opacity: 100;
+}
+
+.notification#error {
+    color: red;
+}
+
+@keyframes notification {
+    from {
+        opacity: 100
+    }
+
+    65% {
+        opacity: 100
+    }
+
+    to {
+        opacity: 0
+    }
+}
