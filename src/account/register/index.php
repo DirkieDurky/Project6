@@ -18,7 +18,7 @@ include "../extend.php";
             <h1>Account aanmaken</h1>
             <form action="createAccount.php">
                 <label>
-                    Voornaam:<br>
+                    Naam:<br>
                     <input placeholder="Naam" type="text" name="name" value="<?= isset($_SESSION['creAccFirst']) ? $_SESSION['creAccFirst'] : "" ?>"><br>
                 </label>
                 <label>
