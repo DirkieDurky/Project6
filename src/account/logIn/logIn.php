@@ -13,20 +13,22 @@ $sth -> execute([$_GET['email']]);
 $row = $sth -> fetch();
 
 $_SESSION['loggedID'] = $row['ID'];
+$emailCorrect = false;
 
 if ($_GET['email'] == "") {
     $_SESSION['error'] .= "Geen email ingevoerd.<br>";
     unset($_SESSION['logInEmail']);
+} else if ($row['ID'] == "") {
+    $_SESSION['error'] .= "Er bestaat geen account dat deze email gebruikt.<br>";
+    unset($_SESSION['logInEmail']);
 } else {
-    if ($row['ID'] == "") {
-        $_SESSION['error'] .= "Er bestaat geen account dat deze email gebruikt.<br>";
-        unset($_SESSION['logInEmail']);
-    }
+    $emailCorrect = true;
 }
+
 if ($_GET['pass'] == "") {
     $_SESSION['error'] .= "Geen wachtwoord ingevoerd.<br>";
     unset($_SESSION['logInPass']);
-} elseif (!password_verify($_GET['pass'],$row['Wachtwoord'])) {
+} elseif (!password_verify($_GET['pass'],$row['Wachtwoord']) && $emailCorrect) {
     $_SESSION['error'] .= "Uw wachtwoord is onjuist.<br>";
     unset($_SESSION['logInPass']);
 }
