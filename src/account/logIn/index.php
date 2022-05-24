@@ -27,7 +27,7 @@ if (isset($_COOKIE['loginID'])) {
         <div class="field <?= isset($_SESSION['error']) && $_SESSION['error'] != "" ? "extend" : "" ?>" id="logIn">
             <h1>Inloggen bij Mijn Donkey Travel</h1><br>
             <form action="logIn.php">
-                <div class=name>
+                <div class=email>
                     <label>
                         Email:<br>
                         <input class="input" name="email" placeholder="Email" type="text" value="<?= (isset($_SESSION['logInEmail'])) ? $_SESSION['logInEmail'] : "" ?>">
