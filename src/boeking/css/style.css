@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}    
+:root{
+    --main-bg-color: #197163;
+    --secundaire-color: #065446;
+    --third-color: #FADCAC;
+    --third-color-transparent: rgba(250, 220, 172, 0.4);
+    --line-color: rgba(250, 220, 172, 0.6);
+    --shadow: 0px 0px 10px 10px rgba(41, 115, 92);
+    --text-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    font-family: var(--text-style);
+    background-color: var(--main-bg-color);
+    color: white;
+}
+.uitloggen{
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 20%;
+    font-family: var(--text-style);
+    font-size: 20px;
+    background-color: var(--third-color);
+    border: none;
+    width: 14vh;
+    height: 4vh;
+    border-radius: 6px;
+}
+.lijn{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 60%;
+    background-color: var(--line-color);
+    width: 0.6vh;
+    height: 10vh;
+}
+.ingelogd-als{
+    position: relative;
+    margin-left: 8.5%;
+    margin-top: 4.5%;
+    width: 100vh;
+    height: 12vh;
+    background-color: var(--third-color-transparent);
+}
+.title{
+    position: absolute;
+    padding-left: 68%;
+    padding-top: 1%;
+}
+.account-boeking{
+    margin-left: 58.8%;
+    margin-top: 1%;
+    width: 25vh;
+    height: 4vh;
+    background-color: var(--third-color);
+    opacity: 0.4;
+}
+.boeking-title{
+    position: absolute;
+    margin-left: 12%;
+}
+.boeking{
+    margin-left: 12%;
+    margin-top: 8%;
+    width: 130vh;
+    height: 50vh;
+    background-color: var(--secundaire-color);
+    box-shadow: 24px 24px 0px 24px rgba(14,98,82);
+}
+.link-startpagina{
+    position: absolute;
+    margin-left: 40%;
+    margin-bottom: 10%;
+}
+.logo{
+    background-color: var(--third-color-transparent);
+    height: 17.4%;
+    margin-bottom: 10%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, tr {
+    text-align: center;
+    padding: 3%;
+  }
+  th {
+    background-color: var(--third-color-transparent);
+  }
+
+
