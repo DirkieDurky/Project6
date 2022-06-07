@@ -16,7 +16,7 @@
 
 <?php
 require_once "../../account/DB_Connection.php";
-$pin = rand(1000, 9999);
+$pin = rand(10000, 99999);
 
 if (isset($_POST['knop'])){
     try {

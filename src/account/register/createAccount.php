@@ -11,10 +11,10 @@ $_SESSION['creAccPass'] = $_GET['pass'];
 $_SESSION['creAccRepass'] = $_GET['repass'];
 
 if ($_GET['name'] == ""){
-    $_SESSION['error'] .= "Geen voornaam ingevoerd.<br>";
+    $_SESSION['error'] .= "Geen naam ingevoerd.<br>";
     unset($_SESSION['creAccFirst']);
 } else if (!preg_match('/^[a-zA-Z \.]+$/', $_GET['name'])){
-    $_SESSION['error'] .= "Voornaam is niet geldig.<br>";
+    $_SESSION['error'] .= "Naam is niet geldig.<br>";
     unset($_SESSION['creAccFirst']);
 }
 if ($_GET['email'] == ""){
