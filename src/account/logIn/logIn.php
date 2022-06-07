@@ -53,6 +53,6 @@ if ($_SESSION['error'] != "") {
         setcookie("token", $token, time() + 2592000, "/");
     }
 
-    header("Location: ../../index.php");
+    header("Location: ../../boeking");
     exit();
 }

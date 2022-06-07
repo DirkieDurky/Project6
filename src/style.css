@@ -1,0 +1,13 @@
+:root {
+    --main-bg-color: #197163;
+    --secundaire-color: #065446;
+    --third-color: #FADCAC;
+    --third-color-transparent: rgba(250, 220, 172, 0.4);
+    --line-color: rgba(250, 220, 172, 0.6);
+    --shadow: 0px 0px 10px 10px rgba(41, 115, 92);
+    --text-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="submit" i] {
+    cursor: pointer;
+}
