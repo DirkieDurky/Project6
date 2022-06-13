@@ -4,7 +4,7 @@
 
 body {
     font-family: var(--text-style);
-    background-color: var(--main-bg-color);
+    background-color: var(--bg-color);
     color: white;
 }
 
@@ -64,7 +64,7 @@ body {
     margin-top: 8%;
     width: 130vh;
     height: 50vh;
-    background-color: var(--secundaire-color);
+    background-color: var(--second-color);
     box-shadow: 24px 24px 0px 24px rgba(14, 98, 82);
 }
 

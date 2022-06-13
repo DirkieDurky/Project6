@@ -13,17 +13,37 @@ body#logIn {
     grid-template-areas: "backbutton field empty";
 }
 
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    width: 75%;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    background-color: var(--second-color-transparent);
+}
+
 .field {
+    position: absolute;
     grid-area: field;
     display: block;
-    font-family: "Torus Regular", serif;
-    margin-top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 9.5rem;
+    font-family: var(--text-style);
     color: white;
     text-align: center;
-    width: 600px;
-    border-radius: 16px;
+    width: 75%;
+    max-width: 30rem;
     font-size: 17px;
-    background-color: #333;
+    background-color: var(--first-color);
+    box-shadow: 24px 24px 0px 24px rgb(14 98 82);
 }
 
 .extend {
@@ -44,13 +64,13 @@ body#logIn {
     grid-area: backbutton;
     justify-self: end;
     align-self: start;
-    margin-top: 1rem;
+    margin-top: 10rem;
     margin-right: 1rem;
     font-family: "Torus Regular", serif;
     color: white;
     text-align: center;
     font-size: 17px;
-    background-color: #333;
+    background-color: var(--first-color);
     border: none;
     text-decoration: none;
     padding: 20px 40px;
@@ -77,11 +97,12 @@ h1 {
     font-size: 20px;
     position: relative;
     color: white;
-    background-color: #222;
+    background-color: var(--second-color);
     border: none;
     border-radius: 7px;
     padding: 7px 10px;
-    width: 20em;
+    width: 80%;
+    max-width: 20rem;
     height: 2em;
     margin-bottom: 25px;
     margin-top: 5px;
@@ -89,13 +110,14 @@ h1 {
 
 .submit {
     font-family: "Torus Regular", serif;
-    color: white;
+    color: black;
     font-size: 20px;
     height: 55px;
-    width: 350px;
+    width: 80%;
+    max-width: 17rem;
     position: relative;
     margin-top: 20px;
-    background-color: red;
+    background-color: var(--third-color);
     border: none;
     border-radius: 10px;
 }
@@ -133,22 +155,26 @@ h1 {
     margin-top: 0;
 }
 
+form {
+    margin-top: 4rem;
+}
+
 .hyperlinks {
     font-family: "Segoe UI", serif;
     font-size: 16px;
-    position: relative;
-    transform: translate(-50%, -50%);
-    display: block;
+    /* position: relative; */
+    /* transform: translate(-50%, -50%); */
+    /* display: block; */
     left: 50%;
-    width: 500px;
+    /* width: 500px; */
     margin-top: 25px;
-    height: 40px;
+    /* height: 40px; */
     line-height: 40px;
 }
 
 .hyperlinks:link {
     text-decoration: none;
-    color: rgb(255, 204, 34);
+    color: white;
 }
 
 .hyperlinks:hover {
@@ -156,7 +182,7 @@ h1 {
 }
 
 .hyperlinks:visited {
-    color: rgb(255, 204, 34);
+    color: white;
 }
 
 @keyframes show {

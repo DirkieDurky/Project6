@@ -7,15 +7,16 @@ include "../extend.php";
 <head>
     <title>Account maken</title>
     <link rel=stylesheet href="../style.css">
+    <link rel=stylesheet href="../../style.css">
 </head>
 
 <body id="createAccount">
+    <h1>Account aanmaken</h1>
     <div class="grid">
         <a class="backButton" id="createAccount" href="../logIn">Terug</a>
         <div class="field <?php if (isset($_SESSION['error']) && $_SESSION['error'] != "") {
                                 echo "extend";
                             } ?>" id=createAccount>
-            <h1>Account aanmaken</h1>
             <form action="createAccount.php">
                 <label>
                     Naam:<br>
