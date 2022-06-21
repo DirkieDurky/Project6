@@ -55,12 +55,20 @@
                             <th>Status</th>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <?php
+                            require_once('../account/DB_Connection.php');
+                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, tochten.Omschrijving FROM boekingen LEFT JOIN tochten ON boekingen.FKtochtenID = tochten.ID LEFT JOIN klanten ON boekingen.FKklantenID = klanten.ID ");
+                            $result->execute();
+                            $row = $result->fetch();
+                            for ($i=0; $i <= (count($row)); $i++) { 
+                        ?>
+                            <td><?php ?></td>
+                            <td><?php ?></td>
+                            <td><?php ?></td>
+                            <td><?php echo $row['Omschrijving'][$i]?></td>
+                            <td><?php ?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
 
