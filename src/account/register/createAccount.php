@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../DB_Connection.php";
+require_once "../../DB_Connection.php";
 unset($_SESSION['error']);
 $_SESSION['errorLength'] = 0;
 

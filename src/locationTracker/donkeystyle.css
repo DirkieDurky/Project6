@@ -1,0 +1,73 @@
+
+* 
+{
+  box-sizing: border-box;
+}
+
+body 
+{    font-family: Arial, Helvetica, sans-serif;
+}
+       
+table 
+{    border-collapse: collapse;
+     width: 100%;
+}
+
+td, th 
+{    border: 1px solid #ddd;
+     padding: 8px;
+}
+
+th 
+{    padding-top: 12px;
+     padding-bottom: 12px;
+     background-color: #4CAF50;
+     color: white;
+}
+
+td:last-child, .button-column
+{    font-weight: bold;
+     text-align: center;
+     color: red;
+}
+
+tr:nth-child(even)
+{    background-color: #f2f2f2;
+}
+
+tr:hover 
+{    background-color: #ddd;
+}
+
+.cell-right
+{    text-align: right;
+}
+
+.cell-center
+{    text-align: center;
+}
+
+.cell-top
+{    vertical-align: top;
+}
+
+.cell-small
+{    padding-top: 0;
+     padding-bottom: 0;
+}
+
+.action-button
+{    margin-right: 5px;
+}
+
+.cancel-button, a:link, a:visited
+{    background-color: unset !important; 
+     color: unset !important; 
+     text-decoration: none;
+}
+
+input[type="checkbox"]
+{    outline: none;
+     box-shadow: none;
+     margin-right: 5px;
+}
