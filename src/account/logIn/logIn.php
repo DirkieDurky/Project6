@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../DB_Connection.php";
+require_once "../../DB_Connection.php";
 
 $_SESSION['appMan'] = 0;
 // unset($_SESSION['error']);

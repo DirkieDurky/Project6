@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "../extend.php";
-require_once "../DB_Connection.php";
+require_once "../../DB_Connection.php";
 $_SESSION['count'] = 0;
 if (isset($_COOKIE['loginID'])) {
     $sth = $pdo->prepare("SELECT * FROM `klanten` WHERE `ID` = ?");
