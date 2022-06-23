@@ -15,7 +15,6 @@ function pdo_connect_mysql() {
     	exit('Failed to connect to database!'); 
     }
 }
-
 /*try {
 	$conn = new PDO("mysql:host=$servername;dbname=project6"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -47,7 +46,7 @@ function pdo_connect_mysql() {
 <body>
 	<header>
 			<div class = "container"></div> 
-						<form action="../account/logOut" method="post">
+						<form action=".../account/logOut/index.php" method="post">
           				<input class="uitloggen" type="submit" value="Uitloggen">
           				</form>
           					<input class= "inlogscherm">
@@ -60,7 +59,8 @@ function pdo_connect_mysql() {
 	<main>					
 			<div class="container">
 				<input class="balk">
-  					<input class="klantenoverzicht" value="klantenoverzicht">	
+  					<input class="klantenoverzicht" value="klantenoverzicht">
+  				<input class="overzichtscherm"> 	
 			</div>
 	<main>
 	
