@@ -56,17 +56,20 @@
                         </tr>
                         <tr>
                         <?php
-                            require_once('../account/DB_Connection.php');
-                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, tochten.Omschrijving FROM boekingen LEFT JOIN tochten ON boekingen.FKtochtenID = tochten.ID LEFT JOIN klanten ON boekingen.FKklantenID = klanten.ID ");
+                            require_once('../DB_Connection.php');
+                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, boekingen.StartDatum,  ,tochten.Omschrijving, statussen.Status 
+                                                     FROM boekingen LEFT JOIN klanten ON boekingen.FKklantenID = klanten.ID
+                                                                    LEFT JOIN tochten ON boekingen.FKtochtenID = tochten.ID 
+                                                                    LEFT JOIN statussen ON boekingen.FKstatussenID = statussen.ID");
                             $result->execute();
-                            $row = $result->fetch();
-                            for ($i=0; $i <= (count($row)); $i++) { 
+                            while ($row = $result->fetch()) { 
                         ?>
+                        <tr>
+                            <td><?php echo $row['StartDatum']  ?></td>
                             <td><?php ?></td>
                             <td><?php ?></td>
-                            <td><?php ?></td>
-                            <td><?php echo $row['Omschrijving'][$i]?></td>
-                            <td><?php ?></td>
+                            <td><?php echo $row['Omschrijving']?></td>
+                            <td><?php echo $row['Status']?></td>
                         </tr>
                         <?php } ?>
                     </table>
