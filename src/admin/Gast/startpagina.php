@@ -3,26 +3,6 @@
 //$username = "username"; 
 //$password = "password";
 
-
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
-    $DATABASE_NAME = 'project6';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	exit('Failed to connect to database!'); 
-    }
-}
-/*try {
-	$conn = new PDO("mysql:host=$servername;dbname=project6"); 
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connectie succesvol"; 
-} catch (Exception $e) {
-	echo "Connectie gefaald: " . $e->getMessage(); 
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +26,7 @@ function pdo_connect_mysql() {
 <body>
 	<header>
 			<div class = "container"></div> 
-						<form action=".../account/logOut/index.php" method="post">
+						<form action="Project-6/src/account/logOut/index.php" method="post">
           				<input class="uitloggen" type="submit" value="Uitloggen">
           				</form>
           					<input class= "inlogscherm">
@@ -62,6 +42,19 @@ function pdo_connect_mysql() {
   					<input class="klantenoverzicht" value="klantenoverzicht">
   				<input class="overzichtscherm"> 	
 			</div>
+			<table style="width:100%">
+				<tr>
+					<th>Naam</th>
+					<th>Email</th>
+					<th>Telefoon</th>
+					<th>Wachtwoord</th>
+					<th>Status</th>
+				</tr>
+
+
+
+
+				
 	<main>
 	
 </body>
