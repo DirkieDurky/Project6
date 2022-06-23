@@ -122,6 +122,18 @@ body{
     box-shadow: 24px 24px 0px 24px rgba(14, 98, 82);
 }
 
+table, th, td {
+margin-top: 30px;
+border:1px solid black;
+
+
+}
+
+
+
+
+
+
 
 
 /* * {
