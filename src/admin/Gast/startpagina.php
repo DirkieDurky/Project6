@@ -1,17 +1,8 @@
 <?php
-//$servername = "localhost"; 
-//$username = "username"; 
-//$password = "password";
+
+
 
 require_once "../../DB_Connection.php";
-/*try {
-	$conn = new PDO("mysql:host=$servername;dbname=project6"); 
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connectie succesvol"; 
-} catch (Exception $e) {
-	echo "Connectie gefaald: " . $e->getMessage(); 
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +26,7 @@ require_once "../../DB_Connection.php";
 <body>
 	<header>
 			<div class = "container"></div> 
-						<form action=".../account/logOut/index.php" method="post">
+						<form action="Project-6/src/account/logOut/index.php" method="post">
           				<input class="uitloggen" type="submit" value="Uitloggen">
           				</form>
           					<input class= "inlogscherm">
@@ -51,6 +42,19 @@ require_once "../../DB_Connection.php";
   					<input class="klantenoverzicht" value="klantenoverzicht">
   				<input class="overzichtscherm"> 	
 			</div>
+			<table style="width:100%">
+				<tr>
+					<th>Naam</th>
+					<th>Email</th>
+					<th>Telefoon</th>
+					<th>Wachtwoord</th>
+					<th>Status</th>
+				</tr>
+
+
+
+
+				
 	<main>
 	
 </body>
