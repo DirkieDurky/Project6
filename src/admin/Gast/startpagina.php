@@ -1,8 +1,6 @@
 <?php
-
-
-
 require_once "../../DB_Connection.php";
+echo "hallo";
 ?>
 
 <!DOCTYPE html>
