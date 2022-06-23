@@ -3,18 +3,7 @@
 //$username = "username"; 
 //$password = "password";
 
-
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
-    $DATABASE_NAME = 'project6';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	exit('Failed to connect to database!'); 
-    }
-}
+require_once "../../DB_Connection.php";
 /*try {
 	$conn = new PDO("mysql:host=$servername;dbname=project6"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
