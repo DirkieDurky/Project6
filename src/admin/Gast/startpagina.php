@@ -24,15 +24,14 @@ function pdo_connect_mysql() {
 	echo "Connectie gefaald: " . $e->getMessage(); 
 }
 */
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>gast overzicht</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<meta charset="utf-8">
@@ -47,28 +46,23 @@ function pdo_connect_mysql() {
 
 <body>
 	<header>
+			<div class = "container"></div> 
+						<form action="../account/logOut" method="post">
+          				<input class="uitloggen" type="submit" value="Uitloggen">
+          				</form>
+          					<input class= "inlogscherm">
+          						<input class= "ingelogd-als" value="Ingelogd als:">
+          						<input class= "medewerker" value="Medewerker">
+          						<input class= "mijn-donkey-travel" value="Mijn Donkey Travel">
+					</div>
+	</header>
 
-		<div class="uitloggen">
-				<div class = "col-xl-9">
-					<form action="../account/logOut" method="post">
-          	<input class="uitloggen" type="submit" value="Uitloggen">
-          </form>
-</div>
-
-<div class="title">
+	<main>					
 			<div class="container">
-  			<a class="title" href="#">Klantenoverzicht</a>
-</div>
-
-
-		
-
-</header>
-
+				<input class="balk">
+  					<input class="klantenoverzicht" value="klantenoverzicht">	
+			</div>
+	<main>
+	
 </body>
 </html>
-
-
-
-
-

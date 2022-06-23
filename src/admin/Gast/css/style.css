@@ -4,8 +4,10 @@
 
 :root{
   --main-bg-color: #197163;
-  --secundaire-color: #065446;
+  --second-color: #017c55;
   --third-color: #FADCAC;
+  --fourth-color:#A1BC8D;
+  --fifth-color: #C8C64F;
   --third-color-transparent: rgba(250, 220, 172, 0.4);
   --line-color: rgba(250, 220, 172, 0.6);
   --shadow: 0px 0px 10px 10px rgba(41, 115, 92);
@@ -18,35 +20,99 @@ body{
 }
 
 .uitloggen {
-    position: absolute;
-    margin-left: 20%;
-    margin-top: 5%;
-    font-family: var(--text-style);
-    font-size: 20px;
+    position: fixed;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-family: var(--text-style); 
+    font-size: 13px;
     background-color: var(--third-color);
+    border: none; 
+    width: 10vh;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.inlogscherm{
+  position: absolute;
+  margin-left: 27%;
+  margin-top: 3%;
+  font-family: var(--text-style);
+  font-size: 13px;
+  background-color: var(--fourth-color);
+  border: none;
+  width: 100vh;
+  height: 10vh;
+  border-radius: 5px;
+}
+
+.ingelogd-als{
+    position: fixed;
+    margin-left: 30%;
+    margin-top: 4%;
+    font-family: var(--text-style); 
+    font-size: 18px;
+    text-align: left;
+    background-color: var(--fourth-color);
+    color: white; 
     border: none;
-    width: 14vh;
-    height: 4vh;
-    border-radius: 6px;
+    border-radius: 0px;
 }
 
-header{
-  padding: 60px;
-  text-align: center;
-  background: var(--third-color-transparent);
-  color: white;
-  font-size: 30px;
-
+.medewerker{
+    position: fixed;
+    margin-left: 38%;
+    margin-top: 4%;
+    font-family: var(--text-style); 
+    font-size: 18px;
+    text-align: center;
+    background-color: var(--fifth-color);
+    color: black; 
+    border: solid;
+    border-radius: 0px;
 }
 
-.title {
- padding: 0px;
- text-align: center;
- background: #51B24F;
- color: white;
- font-size: 20px;
- font-family: Arial, Helvetica, sans-serif;
+.mijn-donkey-travel{
+    position: fixed;
+    margin-left: 55%;
+    margin-top: 4%;
+    font-family: var(--text-style); 
+    font-size: 25px;
+    text-align: right;
+    background-color: var(--fourth-color);
+    color: white; 
+    border: none;
+    border-radius: 0px;
 }
+
+.balk {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 12%;
+    width: 90%;
+    height: 10vh;
+    background-color: var(--second-color);
+    border: solid;
+    box-shadow: 24px 24px 0px 24px rgba(14, 98, 82);
+}
+
+
+.klantenoverzicht {
+    position: fixed;
+    margin-left: 6%;
+    margin-top: 13%;
+    font-family: var(--text-style); 
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    background-color: var(--second-color);
+    border: none; 
+    width: 88%;
+    height: 6vh;
+    border-radius: 0px;
+}
+
+
+
 
 
 /* * {
@@ -164,6 +230,11 @@ p.thicker {
 
 }
 */
+
+
+
+
+
 
 
 
