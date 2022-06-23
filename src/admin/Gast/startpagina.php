@@ -1,38 +1,14 @@
 <?php
-//$servername = "localhost"; 
-//$username = "username"; 
-//$password = "password";
-
-
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
-    $DATABASE_NAME = 'project6';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	exit('Failed to connect to database!'); 
-    }
-}
-
-/*try {
-	$conn = new PDO("mysql:host=$servername;dbname=project6"); 
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connectie succesvol"; 
-} catch (Exception $e) {
-	echo "Connectie gefaald: " . $e->getMessage(); 
-}
-*/
-
-
+require_once "../../DB_Connection.php";
+echo "hallo";
 ?>
-
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>gast overzicht</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<meta charset="utf-8">
@@ -47,28 +23,37 @@ function pdo_connect_mysql() {
 
 <body>
 	<header>
+			<div class = "container"></div> 
+						<form action="Project-6/src/account/logOut/index.php" method="post">
+          				<input class="uitloggen" type="submit" value="Uitloggen">
+          				</form>
+          					<input class= "inlogscherm">
+          						<input class= "ingelogd-als" value="Ingelogd als:">
+          						<input class= "medewerker" value="Medewerker">
+          						<input class= "mijn-donkey-travel" value="Mijn Donkey Travel">
+					</div>
+	</header>
 
-		<div class="uitloggen">
-				<div class = "col-xl-9">
-					<form action="../account/logOut" method="post">
-          	<input class="uitloggen" type="submit" value="Uitloggen">
-          </form>
-</div>
-
-<div class="title">
+	<main>					
 			<div class="container">
-  			<a class="title" href="#">Klantenoverzicht</a>
-</div>
+				<input class="balk">
+  					<input class="klantenoverzicht" value="klantenoverzicht">
+  				<input class="overzichtscherm"> 	
+			</div>
+			<table style="width:100%">
+				<tr>
+					<th>Naam</th>
+					<th>Email</th>
+					<th>Telefoon</th>
+					<th>Wachtwoord</th>
+					<th>Status</th>
+				</tr>
 
 
-		
 
-</header>
 
+				
+	<main>
+	
 </body>
 </html>
-
-
-
-
-
