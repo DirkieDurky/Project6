@@ -24,7 +24,7 @@ echo "hallo";
 <body>
 	<header>
 			<div class = "container"></div> 
-						<form action="Project-6/src/account/logOut/index.php" method="post">
+						<form action="../../account/logOut" method="post">
           				<input class="uitloggen" type="submit" value="Uitloggen">
           				</form>
           					<input class= "inlogscherm">
