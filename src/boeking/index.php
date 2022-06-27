@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nls">
 
 <head>
     <meta charset="UTF-8">
@@ -57,25 +57,24 @@
                         <tr>
                         <?php
                             require_once('../DB_Connection.php');
-                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, boekingen.StartDatum,  ,tochten.Omschrijving, statussen.Status 
+                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, boekingen.StartDatum, tochten.Omschrijving, statussen.Status 
                                                      FROM boekingen LEFT JOIN klanten ON boekingen.FKklantenID = klanten.ID
                                                                     LEFT JOIN tochten ON boekingen.FKtochtenID = tochten.ID 
                                                                     LEFT JOIN statussen ON boekingen.FKstatussenID = statussen.ID");
                             $result->execute();
                             while ($row = $result->fetch()) { 
                         ?>
-                        <tr>
-                            <td><?php echo $row['StartDatum']  ?></td>
-                            <td><?php ?></td>
-                            <td><?php ?></td>
-                            <td><?php echo $row['Omschrijving']?></td>
-                            <td><?php echo $row['Status']?></td>
-                        </tr>
+                            <tr>
+                                <td><?php echo $row['StartDatum']  ?></td>
+                                <td><?php ?></td>
+                                <td><?php ?></td>
+                                <td><?php echo $row['Omschrijving']?></td>
+                                <td><?php echo $row['Status']?></td>
+                                <td><input type="button" value="delete" name="delete1"></td>
+                            </tr>
                         <?php } ?>
                     </table>
                 </div>
-
-
             </div>
             <div class="col-xl-2"></div>
         </div>
