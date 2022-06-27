@@ -70,13 +70,12 @@
                                 <td><?php ?></td>
                                 <td><?php echo $row['Omschrijving']?></td>
                                 <td><?php echo $row['Status']?></td>
-                                <td><input type="button" value="delete" name="delete1"></td>
+                                <td><input type="button" value="delete" name="delete<?= $row['ID']?>"></td>
                             </tr>
                         <?php } ?>
                     </table>
                 </div>
             </div>
-            <div class="col-xl-2"></div>
         </div>
     </main>
 
