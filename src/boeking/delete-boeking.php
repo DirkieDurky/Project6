@@ -13,3 +13,4 @@ while ($row = $sth->fetch()) {
 }
 
 header("Location: index.php");
+?>
