@@ -1,6 +1,6 @@
 <?php
 require_once "../DB_Connection.php";
-session_start();
+// session_start();
 $_SESSION['reservationError'] = "";
 $_SESSION['success'] = false;
 ?>
@@ -11,8 +11,8 @@ $_SESSION['success'] = false;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/grid.css" rel="stylesheet" type="text/css">
-    <link href="/src/style.css" rel="stylesheet" type="text/css">
+    <link href="../grid.css" rel="stylesheet" type="text/css">
+    <link href="../../src/style.css" rel="stylesheet" type="text/css">
     <link href="create-reservation/style.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>Boeking aanmaken</title>
@@ -62,7 +62,10 @@ $_SESSION['success'] = false;
                             </select>
                         </label><br>
                     </div>
-                    <input name="submit" value="Boeken" type="submit">
+                    <div class="container">
+                        <input name=" submit" value="Boeken" type="submit">
+                        <a class="backButton" href="index.php?selected=overview">Terug</a>
+                    </div>
                 </form>
                 <span class="errorMessage">
                     <?php

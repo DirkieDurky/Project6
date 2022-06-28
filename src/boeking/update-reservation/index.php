@@ -30,7 +30,7 @@ $result = $sth->fetch();
         <div class="col-xl-1"></div>
         <div class="col-xl-9">
             <div class="pagina-selecteren">
-                
+
             </div>
             <div class="boeking-title">
                 <h2>Boeking bijwerken:</h2>
@@ -76,7 +76,10 @@ $result = $sth->fetch();
                             </select>
                         </label><br>
                     </div>
-                    <input name="submit" value="Boeken" type="submit">
+                    <div class="container">
+                        <input name=" submit" value="Boeken" type="submit">
+                        <a class="backButton" href="index.php?selected=overview">Terug</a>
+                    </div>
                 </form>
                 <span class="errorMessage">
                     <?php

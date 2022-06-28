@@ -14,6 +14,30 @@
     border-radius: 6px;
 }
 
+.container {
+    display: flex;
+    flex: 1 1;
+}
+
+.backButton {
+    margin-top: 1em;
+    background-color: var(--fourth-color);
+    border: none;
+    color: black;
+    text-decoration: none;
+    width: 14vh;
+    height: 4vh;
+    text-align: center;
+    transition: 0.3s;
+    font-family: var(--text-style);
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 2em;
+    padding: 0.1em;
+}
+
 [type="text"],
 [type="password"],
 [type="date"],
