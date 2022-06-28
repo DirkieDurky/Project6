@@ -28,11 +28,12 @@ require_once "../../DB_Connection.php";
 		<div class="container"></div>
 		<form action="../../account/logOut" method="post">
 			<input class="uitloggen" type="submit" value="Uitloggen">
+			
 		</form>
 <div class="container"></div>
 		<input class="inlogscherm" disabled>
 		<input class="ingelogd-als" value="Ingelogd als:" disabled>
-		<input class="medewerker" value="Medewerker" disabled>
+		<input class="klant" value="Klant" disabled>
 		<input class="mijn-donkey-travel" value="Mijn Donkey Travel" disabled>
 		<img src="images/donkeytravellogo.png" alt="logo">
 		<input class="trademark" value="© 2022, Donkey travel" disabled>
@@ -42,71 +43,15 @@ require_once "../../DB_Connection.php";
 	<main>
 		<div class="container">
 			<input class="balk" disabled>
-			<input class="klantenoverzicht" value="klantenoverzicht" disabled>
+			<input class="mijn_persoonsgegevens" value="Mijn persoonsgegevens" disabled>
 			<input class="overzichtscherm" disabled>
 		</div>
 
-		<table class= "table1">
-			<tr class= "tablerow1">
+		<table class= "table1-2">
+			<tr class= "tablerow1-2">
 				<th>Naam</th>
-				<th>Email</th>
-				<th>Telefoon</th>
-				<th>Status</th>
 			</tr>
 		</table>
-
-		<table class= "table2">
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-
-
-			<tr class= "tablerow2">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-			<main>
 
 </body>
 </html>
