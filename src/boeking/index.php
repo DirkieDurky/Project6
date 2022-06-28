@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once "../DB_Connection.php";
+$sth = $pdo->prepare("SELECT * FROM `klanten` WHERE `ID` = ?");
+$sth->execute([$_SESSION['loggedID']]);
+$row = $sth->fetch();
+
+$namelogin = $row['Naam'];
+?>
+
 <!DOCTYPE html>
 <html lang="nls">
 
@@ -22,11 +32,12 @@
                 </div>
                 <div class="col-xl-9">
                     <div class="ingelogd-als">
+                           <span><?php echo $namelogin ?></span>
+                    </div>
                         <div class="lijn"></div>
                         <div class="title">
                             <h1>Mijn Donkey Travel</h1>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

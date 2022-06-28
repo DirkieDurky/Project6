@@ -1,6 +1,5 @@
 <?php
 require_once "../DB_Connection.php";
-session_start();
 $_SESSION['reservationError'] = "";
 $_SESSION['success'] = false;
 
