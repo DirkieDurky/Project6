@@ -103,8 +103,6 @@ th {
     padding: 5px 5px;
     text-align: center;
     font-size: 12px;
-    margin-top: 8%;
-    margin-left: 12%;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
@@ -118,8 +116,21 @@ th {
     padding: 5px 5px;
     text-align: center;
     font-size: 12px;
-    margin-top: 8%;
-    margin-left: 12%;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.create-reservation-button {
+    background-color: rgb(62, 255, 88);
+    border: none;
+    color: black;
+    width: 2em;
+    height: 2em;
+    line-height: 200%;
+    text-align: center;
+    font-size: 12px;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;

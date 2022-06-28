@@ -52,10 +52,15 @@
                             <td><?php echo $row['Status'] ?></td>
                         </tr>
                     <?php } ?>
+                    <tr>
+                        <td>
+                            <a class="create-reservation-button" href="index.php?selected=create-reservation">+</a>
+                        </td>
+                    </tr>
                     </table>
                 </form>
             </div>
         </div>
-        <div class="col-xl-2"></div>
+        <div class=" col-xl-2"></div>
     </div>
 </body>
