@@ -59,11 +59,13 @@ body {
     position: absolute;
     margin-left: 12%;
 }
+
 .link-startpagina {
     position: absolute;
     margin-top: 1%;
     margin-left: 3%;
 }
+
 .boeking {
     margin-left: 12%;
     margin-top: 8%;
@@ -94,8 +96,23 @@ th {
     background-color: var(--second-color-transparent);
 }
 
-.delete-knop{
+.delete-knop {
     background-color: tomato;
+    border: none;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8%;
+    margin-left: 12%;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-knop {
+    background-color: rgb(255, 197, 71);
     border: none;
     color: black;
     padding: 5px 5px;

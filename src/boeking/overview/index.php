@@ -21,9 +21,10 @@
             </div>
             <div class="col-xl-12 boeking">
                 <img class="link-startpagina" src="images/donkeytravellogo.png" width="80" height="60">
-                <form action="delete-boeking.php">
+                <form action="handle-boeking-buttons.php">
                     <table>
                         <tr>
+                            <th></th>
                             <th></th>
                             <th>Startdatum</th>
                             <th>Aantal dagen</th>
@@ -42,7 +43,8 @@
                             while ($row = $result->fetch()) {
                             ?>
                         <tr>
-                            <td><input class="delete-knop" type="submit" value="delete" name="delete<?= $row['ID'] ?>"></td>
+                            <td><a class="delete-knop" href="delete-boeking.php?delete=<?= $row['ID'] ?>">Delete</a></td>
+                            <td><a class="edit-knop" href="index.php?selected=update-reservation&resId=<?= $row['ID'] ?>">Bijwerken</a></td>
                             <td><?php echo $row['StartDatum']  ?></td>
                             <td><?php echo $row['AantalDagen'] ?></td>
                             <td><?php echo $row['Pincode'] ?></td>
