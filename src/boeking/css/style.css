@@ -39,10 +39,19 @@ body {
     background-color: var(--second-color-transparent);
 }
 
+.pagina-selecteren{
+    position: absolute;
+    width: 30vh;
+    height: 5vh;
+    background-color: var(--second-color-transparent);
+    margin-top: 1%;
+    margin-left: 89%;
+}
+
 .title {
     position: absolute;
-    padding-left: 68%;
-    padding-top: 1%;
+    margin-left: 65%;
+    margin-top: 3%;
 }
 
 .account-boeking {
@@ -63,7 +72,7 @@ body {
 .link-startpagina {
     position: absolute;
     margin-top: 1%;
-    margin-left: 3%;
+    margin-left: 7%;
 }
 
 .boeking {
@@ -103,8 +112,6 @@ th {
     padding: 5px 5px;
     text-align: center;
     font-size: 12px;
-    margin-top: 8%;
-    margin-left: 12%;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
@@ -118,10 +125,30 @@ th {
     padding: 5px 5px;
     text-align: center;
     font-size: 12px;
-    margin-top: 8%;
-    margin-left: 12%;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+}
+
+.create-reservation-button {
+    background-color: rgb(62, 255, 88);
+    border: none;
+    color: black;
+    width: 2em;
+    height: 2em;
+    line-height: 200%;
+    text-align: center;
+    font-size: 12px;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.login-naam{
+    position: absolute;
+    font-family: var(--text-style);
+    font-size: 25px;
+    margin-left: 3%;
+    margin-top: 2%;
 }

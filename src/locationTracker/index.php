@@ -21,17 +21,18 @@
 require_once "../DB_Connection.php";
 session_start();
 
-$sth = $pdo->prepare("SELECT `Route` FROM `tochten` WHERE `ID` = (SELECT `FKtochtenID` from `boekingen` WHERE `Pincode` = ?");
+$sth = $pdo->prepare("SELECT `Route` FROM `tochten` WHERE `ID` = (SELECT `FKtochtenID` from `boekingen` WHERE `Pincode` = ?)");
 $sth->execute([$_GET['PIN']]);
 $row = $sth->fetch();
-
-$_SESSION['loggedID'] = $row['ID'];
 
 if (isset($_GET['Knop'])){
     if ($_GET['PIN'] == ""){
         echo "Je hebt geen pincode ingevoerd!";
     }
-    else if ($row['ID'] == ""){
-        echo "Deze Pincode bestaat niet!";
+//    else if (){
+//        echo "Deze Pincode bestaat niet!";
+//    }
+    else{
+        header("Location: view.php?Pin=". $_GET['PIN'] . "&RouteName=". $row['Route']);
     }
 }
