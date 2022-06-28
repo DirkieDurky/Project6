@@ -29,34 +29,82 @@ require_once "../../DB_Connection.php";
 		<form action="../../account/logOut" method="post">
 			<input class="uitloggen" type="submit" value="Uitloggen">
 		</form>
-		<input class="inlogscherm">
-		<input class="ingelogd-als" value="Ingelogd als:">
-		<input class="medewerker" value="Medewerker">
-		<input class="mijn-donkey-travel" value="Mijn Donkey Travel">
+<div class="container"></div>
+		<input class="inlogscherm" disabled>
+		<input class="ingelogd-als" value="Ingelogd als:" disabled>
+		<input class="medewerker" value="Medewerker" disabled>
+		<input class="mijn-donkey-travel" value="Mijn Donkey Travel" disabled>
 		</div>
 	</header>
 
 	<main>
 		<div class="container">
-			<input class="balk">
-			<input class="klantenoverzicht" value="klantenoverzicht">
-			<input class="overzichtscherm">
+			<input class="balk" disabled>
+			<input class="klantenoverzicht" value="klantenoverzicht" disabled>
+			<input class="overzichtscherm" disabled>
 		</div>
-		<table style="width:100%">
-			<tr>
+
+		<table class= "table1">
+			<tr class= "tablerow1">
 				<th>Naam</th>
 				<th>Email</th>
 				<th>Telefoon</th>
-				<th>Wachtwoord</th>
 				<th>Status</th>
+			</tr>
+		</table>
+
+		<table class= "table2">
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 
-
-
-
+			<tr class= "tablerow2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 			<main>
 
 </body>
-
 </html>

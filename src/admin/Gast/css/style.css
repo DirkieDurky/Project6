@@ -9,10 +9,12 @@
   --fourth-color:#A1BC8D;
   --fifth-color: #B0AF46; 
   --sixth-color: #BBD7B1;
+  --overzichtheader-color: white;
   --third-color-transparent: rgba(250, 220, 172, 0.4);
   --line-color: rgba(250, 220, 172, 0.6);
   --shadow: 0px 0px 10px 10px rgba(41, 115, 92);
   --text-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --row-height: 42px ;
 }
 
 body{
@@ -108,7 +110,7 @@ body{
     width: 90%;
     height: 12vh;
     background-color: var(--second-color);
-    border: solid;
+    border: 3px solid black;
 }
 
 .overzichtscherm{
@@ -118,14 +120,49 @@ body{
     width: 90%;
     height: 50vh;
     background-color: var(--sixth-color);
-    border: solid;
+    border: 3px solid black;
     box-shadow: 24px 24px 0px 24px rgba(14, 98, 82);
 }
 
-table, th, td {
-margin-top: 30px;
-border:1px solid black;
+table.table1{
+position: fixed;
+width: 90%; 
+margin-top: 16%;
+height: 9%;
+margin-left: 5%;
+border:3px solid black; 
+background-color: var(--overzichtheader-color);
+}
 
+table.table2{
+position:  fixed;
+width: 90%; 
+margin-top: 20%;
+height: 9%;
+margin-left: 5%;
+border:3px solid black; 
+background-color: none;
+}
+
+
+tr.tablerow1 th{
+position: relative;
+text-align: center;
+margin-top: 16%;
+height: var(--row-height);
+margin-left: 5%;
+border: none; 
+border-right: 1px solid black;
+}
+
+tr.tablerow2 td{
+position: relative;
+text-align: left;
+margin-top: 20%;
+height: var(--row-height);
+margin-left: 5%;
+border-bottom: 2px solid black;
+border-right: 1px solid black;
 
 }
 
