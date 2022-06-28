@@ -39,6 +39,15 @@ body {
     background-color: var(--second-color-transparent);
 }
 
+.pagina-selecteren{
+    position: absolute;
+    width: 30vh;
+    height: 5vh;
+    background-color: var(--second-color-transparent);
+    margin-top: 1%;
+    margin-left: 89%;
+}
+
 .title {
     position: absolute;
     padding-left: 68%;
@@ -63,7 +72,7 @@ body {
 .link-startpagina {
     position: absolute;
     margin-top: 1%;
-    margin-left: 3%;
+    margin-left: 7%;
 }
 
 .boeking {

@@ -21,7 +21,7 @@ $result = $sth->fetch();
     <link href="/src/style.css" rel="stylesheet" type="text/css">
     <link href="create-reservation/style.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <title>Boeking aanmaken</title>
+    <title>Boeking bijwerken</title>
 </head>
 
 <body>
@@ -29,8 +29,11 @@ $result = $sth->fetch();
     <div class="row main col-xl-12">
         <div class="col-xl-1"></div>
         <div class="col-xl-9">
+            <div class="pagina-selecteren">
+                
+            </div>
             <div class="boeking-title">
-                <h2>Boeking aanmaken:</h2>
+                <h2>Boeking bijwerken:</h2>
             </div>
             <div class="col-xl-12 boeking">
                 <form action="update-reservation/updateReservation.php" class="reservationForm">
