@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <div class="account-boeking">
-
-    </div>
     <div class="row main col-xl-12">
         <div class="col-xl-1"></div>
         <div class="col-xl-9">
@@ -23,14 +20,13 @@
                 <h2>Boeking overzicht:</h2>
             </div>
             <div class="col-xl-12 boeking">
+                <img class="link-startpagina" src="images/donkeytravellogo.png" width="80" height="60">
                 <form action="delete-boeking.php">
-                    <div class="logo col-xl-2">
-                        <p class="link-startpagina"><a href="#"><img src="images/donkeytravellogo.png" width="80" height="60"></a></p>
-                    </div>
-                    <table class="col-xl-10">
+                    <table>
                         <tr>
+                            <th></th>
                             <th>Startdatum</th>
-                            <th>Einddatum</th>
+                            <th>Aantal dagen</th>
                             <th>PIN Code</th>
                             <th>Tocht</th>
                             <th>Status</th>
@@ -38,7 +34,7 @@
                         <tr>
                             <?php
                             require_once('../DB_Connection.php');
-                            $result = $pdo->prepare("SELECT boekingen.ID, klanten.naam, boekingen.StartDatum, tochten.Omschrijving, statussen.Status 
+                            $result = $pdo->prepare("SELECT boekingen.ID, boekingen.Pincode, tochten.AantalDagen, klanten.naam, boekingen.StartDatum, tochten.Omschrijving, statussen.Status 
                                                      FROM boekingen LEFT JOIN klanten ON boekingen.FKklantenID = klanten.ID
                                                                     LEFT JOIN tochten ON boekingen.FKtochtenID = tochten.ID 
                                                                     LEFT JOIN statussen ON boekingen.FKstatussenID = statussen.ID");
@@ -46,17 +42,18 @@
                             while ($row = $result->fetch()) {
                             ?>
                         <tr>
+                            <td><input class="delete-knop" type="submit" value="delete" name="delete<?= $row['ID'] ?>"></td>
                             <td><?php echo $row['StartDatum']  ?></td>
-                            <td><?php ?></td>
-                            <td><?php ?></td>
+                            <td><?php echo $row['AantalDagen'] ?></td>
+                            <td><?php echo $row['Pincode'] ?></td>
                             <td><?php echo $row['Omschrijving'] ?></td>
                             <td><?php echo $row['Status'] ?></td>
-                            <td><input type="submit" value="delete" name="delete<?= $row['ID'] ?>"></td>
                         </tr>
                     <?php } ?>
                     </table>
                 </form>
             </div>
         </div>
+        <div class="col-xl-2"></div>
     </div>
 </body>

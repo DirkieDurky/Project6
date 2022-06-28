@@ -59,7 +59,11 @@ body {
     position: absolute;
     margin-left: 12%;
 }
-
+.link-startpagina {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 3%;
+}
 .boeking {
     margin-left: 12%;
     margin-top: 8%;
@@ -67,12 +71,6 @@ body {
     height: 50vh;
     background-color: var(--second-color);
     box-shadow: 24px 24px 0px 24px rgba(14, 98, 82);
-}
-
-.link-startpagina {
-    position: absolute;
-    margin-left: 40%;
-    margin-bottom: 10%;
 }
 
 .logo {
@@ -94,4 +92,19 @@ tr {
 
 th {
     background-color: var(--second-color-transparent);
+}
+
+.delete-knop{
+    background-color: tomato;
+    border: none;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8%;
+    margin-left: 12%;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
 }
