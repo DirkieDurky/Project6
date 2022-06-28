@@ -32,12 +32,10 @@ $namelogin = $row['Naam'];
                 </div>
                 <div class="col-xl-9">
                     <div class="ingelogd-als">
-                           <span><?php echo $namelogin ?></span>
+                        <div class="col-xl-4 login-naam">ingelogd als:<br><?php echo $namelogin ?></div>
+                            <div class="lijn"></div>
+                        <h1 class="title">Mijn Donkey Travel</h1>                                                       
                     </div>
-                        <div class="lijn"></div>
-                        <div class="title">
-                            <h1>Mijn Donkey Travel</h1>
-                        </div>
                 </div>
             </div>
         </div>

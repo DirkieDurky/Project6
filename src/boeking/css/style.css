@@ -50,8 +50,8 @@ body {
 
 .title {
     position: absolute;
-    padding-left: 68%;
-    padding-top: 1%;
+    margin-left: 65%;
+    margin-top: 3%;
 }
 
 .account-boeking {
@@ -133,4 +133,11 @@ th {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+}
+.login-naam{
+    position: absolute;
+    font-family: var(--text-style);
+    font-size: 25px;
+    margin-left: 3%;
+    margin-top: 2%;
 }
