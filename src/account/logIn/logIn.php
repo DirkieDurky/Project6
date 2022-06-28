@@ -52,7 +52,8 @@ if ($_SESSION['error'] != "") {
         setcookie("loginID", $row['ID'], time() + 2592000, "/");
         setcookie("token", $token, time() + 2592000, "/");
     }
+    $_SESSION['loginID'] = $row['ID'];
 
-    header("Location: ../../boeking");
+    header("Location: ../../boeking?selected=overview");
     exit();
 }

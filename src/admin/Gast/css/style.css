@@ -5,7 +5,7 @@
 :root{
   --main-bg-color: #197163;
   --second-color: #017c55;
-  --third-color: #FADCAC;
+  --fourth-color: #FADCAC;
   --fourth-color:#A1BC8D;
   --fifth-color: #B0AF46; 
   --sixth-color: #BBD7B1;
@@ -26,7 +26,7 @@ body{
     margin-top: 3%;
     font-family: var(--text-style); 
     font-size: 13px;
-    background-color: var(--third-color);
+    background-color: var(--fourth-color);
     border: none; 
     width: 10vh;
     height: 5vh;

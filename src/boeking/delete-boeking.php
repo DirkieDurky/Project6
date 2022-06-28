@@ -12,4 +12,4 @@ while ($row = $sth->fetch()) {
     }
 }
 
-header("Location: index.php");
+header("Location: index.php?selected=overview");

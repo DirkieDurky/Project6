@@ -14,7 +14,7 @@ body {
     margin-top: 20%;
     font-family: var(--text-style);
     font-size: 20px;
-    background-color: var(--third-color);
+    background-color: var(--fourth-color);
     border: none;
     width: 14vh;
     height: 4vh;
@@ -46,11 +46,12 @@ body {
 }
 
 .account-boeking {
-    margin-left: 58.8%;
-    margin-top: 1%;
+    position: relative;
+    /* margin-left: 58.8%; */
+    /* margin-top: 1%; */
     width: 25vh;
     height: 4vh;
-    background-color: var(--third-color);
+    background-color: var(--fourth-color);
     opacity: 0.4;
 }
 

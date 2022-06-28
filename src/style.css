@@ -2,8 +2,9 @@
     --bg-color: #197163;
     --first-color: #065446;
     --second-color: #003A30;
+    --third-color: #001f1a;
     --second-color-transparent: rgba(250, 220, 172, 0.4);
-    --third-color: #FADCAC;
+    --fourth-color: #FADCAC;
     --line-color: rgba(250, 220, 172, 0.6);
     --shadow: 0px 0px 10px 10px rgba(41, 115, 92);
     --text-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

@@ -1,0 +1,34 @@
+.reservationForm {
+    margin-top: 3em;
+    margin-left: 3em;
+}
+
+.reservationForm [type="submit"] {
+    margin-top: 1em;
+    font-family: var(--text-style);
+    font-size: 20px;
+    background-color: var(--fourth-color);
+    border: none;
+    width: 14vh;
+    height: 4vh;
+    border-radius: 6px;
+}
+
+[type="text"],
+[type="password"],
+[type="date"],
+select {
+    font-family: "Torus Regular", serif;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+    width: 80%;
+    max-width: 20rem;
+    height: 2em;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
